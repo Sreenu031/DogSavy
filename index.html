@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paws for Hope - Every Dog Deserves a Second Chance</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="../Frontend/css/indexstyles.css">
+    </head>
+    <body>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Every Dog Deserves a
+                        <span class="hero-highlight">Second Chance</span>
+                        <span class="hero-emoji">🐾</span>
+                    </h1>
+                    <p class="hero-description">
+                        Join our mission to rescue, rehabilitate, and rehome
+                        dogs in need.
+                        Together, we can give every dog the love and care they
+                        deserve.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="../Frontend/pages/register-user.html">
+                            <button class="btn btn-hero">Report a Dog</button>
+                        </a>
+                        <a href="../Frontend/pages/register-ngo.html"><button
+                                class="btn btn-glass">Join as NGO</button></a>
+                        <a href="../Frontend/pages/login.html"><button
+                                class="btn btn-login">Login</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+        </section>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLoginModal()">&times;</span>
+                <h2>Login to Paws for Hope</h2>
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password"
+                            required>
+                    </div>
+                    <button type="submit"
+                        class="btn btn-hero full-width">Login</button>
+                    <p class="login-footer">
+                        Don't have an account? <a href="#"
+                            onclick="showSignup()">Sign up</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <!-- User Section -->
+        <section class="section user-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">How You Can Help</h2>
+                    <p class="section-subtitle">Making a difference is just a
+                        photo away</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Spot a Dog in Need</h3>
+                        <p>See a stray or injured dog? Take a quick photo with
+                            our app to start the rescue process.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>Auto-Location Tracking</h3>
+                        <p>Your location is automatically captured to help NGOs
+                            reach the dog quickly and efficiently.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Instant NGO Alert</h3>
+                        <p>Nearby NGOs are instantly notified and can respond to
+                            help the dog in need.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NGO Section -->
+        <section class="section ngo-section">
+            <div class="container">
+                <div class="ngo-content">
+                    <div class="ngo-text">
+                        <h2 class="section-title">Partner with Us</h2>
+                        <p class="section-subtitle">Join our network of
+                            dedicated NGOs</p>
+                        <ul class="ngo-benefits">
+                            <li>🔔 Instant notifications for nearby rescues</li>
+                            <li>📊 Track your rescue impact with detailed
+                                analytics</li>
+                            <li>🤝 Connect with volunteers and other NGOs</li>
+                            <li>💰 Access to funding opportunities and
+                                donations</li>
+                        </ul>
+                        <button class="btn btn-hero">Register Your NGO</button>
+                    </div>
+                    <div class="ngo-image">
+                        <img src="../Frontend/assets/volunteer-photo.jpg"
+                            alt="Volunteers helping dogs" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Stories of Hope</h2>
+                    <p class="section-subtitle">Real stories from our
+                        community</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Thanks to this platform, we rescued Max from the streets. The quick response from the local NGO was incredible!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨</div>
+                            <div class="author-info">
+                                <h4>John Smith</h4>
+                                <span>Dog Rescuer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"As an NGO, this platform has revolutionized how we respond to rescue calls. We've saved 50+ dogs this year!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩</div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>Paws & Hearts NGO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The location tracking feature helped us find an injured puppy within minutes. Technology saving lives!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍⚕️</div>
+                            <div class="author-info">
+                                <h4>Dr. Mike Wilson</h4>
+                                <span>Vet Volunteer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="section stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">1,247</div>
+                        <div class="stat-label">Dogs Rescued</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">NGOs Onboarded</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">892</div>
+                        <div class="stat-label">Active Volunteers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="section gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Rescue Gallery</h2>
+                    <p class="section-subtitle">Heartwarming moments of hope and
+                        new beginnings</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../Frontend/assets/rescued-dogs-1.jpg"
+                            alt="Rescued dog being cared for" />
+                        <div class="gallery-overlay">
+                            <h3>Buddy's Rescue</h3>
+                            <p>From streets to safety</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../Frontend/assets/adoption-success.jpg"
+                            alt="Happy adoption moment" />
+                        <div class="gallery-overlay">
+                            <h3>Forever Home</h3>
+                            <p>Luna finds her family</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../Frontend/assets/volunteer-photo.jpg"
+                            alt="Volunteers with rescued dogs" />
+                        <div class="gallery-overlay">
+                            <h3>Team Effort</h3>
+                            <p>Community coming together</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Paws for Hope</h3>
+                        <p>Every dog deserves a second chance at happiness.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘</a>
+                            <a href="#" class="social-link">📷</a>
+                            <a href="#" class="social-link">🐦</a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>License</h4>
+                        <p class="footer-text">All dog images used are either
+                            royalty-free from Unsplash or taken with
+                            permission.</p>
+                        <p class="footer-text">This project is licensed under
+                            MIT License.</p>
+                        <p class="footer-text">We respect user privacy and never
+                            track location without consent.</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Paws for Hope. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>

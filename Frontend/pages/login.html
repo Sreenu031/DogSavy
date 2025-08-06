@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <form id="loginForm">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password"
+                required />
+            <select id="role">
+                <option value="user">User</option>
+                <option value="ngo">NGO</option>
+            </select>
+            <button type="submit">Login</button>
+            <div class="registration-links">
+                <p>Don't have an account?</p>
+                <p><a href="../pages/register-user.html">Register as
+                        User</a></p>
+                <p><a href="../pages/register-ngo.html">Register as NGO</a></p>
+            </div>
+        </form>
+
+        <script src="../js/login.js"></script>
+    </body>
+</html>

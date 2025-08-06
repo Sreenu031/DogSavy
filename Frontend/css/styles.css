@@ -1,0 +1,155 @@
+/* login.css - Based on userDashboard.css for consistent styling */
+
+/* Reset and Base Styles - Inherited from userDashboard.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Using Poppins as per userDashboard.css */
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Background gradient from userDashboard.css */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* To stack form and any potential elements outside it */
+}
+
+/* Login Form Styling - Adapted from .report-form-container in userDashboard.css */
+#loginForm {
+    max-width: 450px; /* Slightly smaller than report form for login */
+    width: 90%; /* Responsive width */
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem; /* Adjusted padding */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Spacing between form elements */
+    /* Removed margin-bottom here as registration links are now inside */
+}
+
+#loginForm h2 {
+    text-align: center;
+    font-size: 2rem; /* Consistent with section headers */
+    margin-bottom: 1.5rem; /* Space below heading */
+    color: #667eea; /* Primary color for headings */
+    font-weight: 600;
+}
+
+#loginForm input,
+#loginForm select {
+    padding: 1rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: white;
+    width: 100%; /* Full width inputs */
+}
+
+#loginForm input:focus,
+#loginForm select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#loginForm button[type="submit"] {
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%); /* Submit button style from userDashboard.css */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    width: 100%; /* Full width button */
+}
+
+#loginForm button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Registration Links - Now inside the form */
+.registration-links {
+    text-align: center; /* Center the text within this div */
+    margin-top: 1.5rem; /* Space above the links, within the form */
+    color: #333; /* Color adjusted for readability inside the white form */
+    font-size: 0.95rem; /* Slightly smaller font size */
+}
+
+.registration-links p {
+    margin-bottom: 0.5rem; /* Space between paragraphs */
+}
+
+.registration-links a {
+    color: #667eea; /* Primary color for links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.registration-links a:hover {
+    color: #764ba2; /* Darker hover color */
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #loginForm {
+        padding: 2rem 1.5rem; /* Adjust padding for smaller screens */
+        margin: 1rem auto; /* Center the form with margin */
+    }
+
+    #loginForm h2 {
+        font-size: 1.75rem;
+    }
+
+    #loginForm input,
+    #loginForm select,
+    #loginForm button[type="submit"] {
+        padding: 0.85rem; /* Slightly smaller padding for inputs/buttons */
+        font-size: 0.95rem;
+    }
+
+    .registration-links {
+        font-size: 0.9rem;
+        margin-top: 1rem; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #loginForm {
+        padding: 1.5rem 1rem; /* Further adjust padding for very small screens */
+        margin: 0.5rem auto;
+    }
+
+    #loginForm h2 {
+        font-size: 1.5rem;
+    }
+
+    #loginForm input,
+    #loginForm select,
+    #loginForm button[type="submit"] {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .registration-links {
+        font-size: 0.85rem;
+        margin-top: 0.75rem;
+    }
+}

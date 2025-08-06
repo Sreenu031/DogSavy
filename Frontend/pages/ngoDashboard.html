@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DogSavy - NGO Dashboard</title>
+        <link rel="stylesheet" href="../css/ngoDashboard.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-dog"></i>
+                    <span>DogSavy</span>
+                    <span class="ngo-badge">NGO</span>
+                </div>
+                <div class="nav-menu">
+                    <div class="profile-section">
+                        <div class="profile-info">
+                            <div class="profile-avatar">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="profile-details">
+                                <span id="welcomeNgo"
+                                    class="welcome-text">Welcome, NGO!</span>
+                                <small class="profile-role">Rescue
+                                    Organization</small>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="logoutBtnNgo" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- Incoming Rescue Requests Section -->
+            <section class="requests-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2><i class="fas fa-map-marker-alt"></i> Incoming
+                            Rescue Requests</h2>
+                        <p>New stray dog reports waiting for your response</p>
+                    </div>
+
+                    <!-- Desktop Table View -->
+                    <div class="table-container desktop-view">
+                        <table class="reports-table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Location</th>
+                                    <th>Date/Time</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="incomingBody">
+                                <!-- Incoming requests will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Mobile Card View -->
+                    <div class="cards-container mobile-view" id="incomingCards">
+                        <!-- Incoming request cards will be inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ongoing Rescues Section -->
+            <section class="ongoing-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2><i class="fas fa-paw"></i> Ongoing Rescues</h2>
+                        <p>Dogs currently being rescued by your organization</p>
+                    </div>
+
+                    <!-- Desktop Table View -->
+                    <div class="table-container desktop-view">
+                        <table class="reports-table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Location</th>
+                                    <th>Date/Time</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ongoingBody">
+                                <!-- Ongoing rescues will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Mobile Card View -->
+                    <div class="cards-container mobile-view" id="ongoingCards">
+                        <!-- Ongoing rescue cards will be inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Summary Section -->
+            <section class="summary-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2><i class="fas fa-chart-bar"></i> Rescue Summary</h2>
+                        <p>Your organization's impact on stray dog welfare</p>
+                    </div>
+
+                    <div class="stats-container">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number"
+                                    id="totalRescued">0</div>
+                                <div class="stat-label">Dogs Rescued</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number"
+                                    id="ongoingCount">0</div>
+                                <div class="stat-label">Ongoing Rescues</div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-inbox"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-number"
+                                    id="pendingCount">0</div>
+                                <div class="stat-label">Pending Requests</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-dog"></i>
+                        <span>DogSavy</span>
+                    </div>
+                    <p>Empowering NGOs to make a difference in the lives of
+                        stray dogs through efficient rescue coordination.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">NGO Resources</a></li>
+                        <li><a href="#">Rescue Guidelines</a></li>
+                        <li><a href="#">Training Materials</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>NGO Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Report Issues</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                        <li><a href="#">Community Forum</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i>
+                            ngo-support@dogsavy.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Rescue
+                            Street, Animal City</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 DogSavy NGO Dashboard. All rights reserved. |
+                    Together we save lives <i class="fas fa-heart"></i></p>
+            </div>
+        </footer>
+
+        <script src="../js/ngoDashboard.js"></script>
+    </body>
+</html>

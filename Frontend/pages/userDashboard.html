@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DogSavy - User Dashboard</title>
+        <link rel="stylesheet" href="../css/userDashboard.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-dog"></i>
+                    <span>DogSavy</span>
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-item">
+                        <span id="welcome" class="welcome-text">Welcome,
+                            User!</span>
+                    </div>
+                    <button id="logoutBtn" class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <!-- Report Section -->
+            <section class="report-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2><i class="fas fa-camera"></i> Report a Stray
+                            Dog</h2>
+                        <p>Help us save more stray dogs by reporting them in
+                            your area</p>
+                    </div>
+
+                    <div class="report-form-container">
+                        <form id="dogForm" class="report-form">
+                            <div class="form-group">
+                                <label for="dogImage">
+                                    <i class="fas fa-image"></i>
+                                    Dog Image
+                                </label>
+                                <div class="file-upload">
+                                    <input type="file" id="dogImage"
+                                        accept="image/*" required>
+                                    <div class="file-upload-design">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <span>Choose file or drag and
+                                            drop</span>
+                                        <small>PNG, JPG up to 10MB</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Location
+                                </label>
+                                <input type="text" id="location"
+                                    placeholder="Auto-detecting location..."
+                                    required readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">
+                                    <i class="fas fa-sticky-note"></i>
+                                    Additional Notes
+                                </label>
+                                <textarea id="description"
+                                    placeholder="Describe the dog's condition, behavior, or any other relevant information..."
+                                    rows="4"></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Submit Report
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reports Section -->
+            <section class="reports-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2><i class="fas fa-history"></i> My Reports</h2>
+                        <p>Track the status of your reported stray dogs</p>
+                    </div>
+
+                    <!-- Desktop Table View -->
+                    <div class="table-container desktop-view">
+                        <table id="reportsTable" class="reports-table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Date/Time</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                    <th>NGO Assigned</th>
+                                </tr>
+                            </thead>
+                            <tbody id="reportsBody">
+                                <!-- Reports will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Mobile Card View -->
+                    <div class="cards-container mobile-view" id="reportsCards">
+                        <!-- Report cards will be inserted here -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-dog"></i>
+                        <span>DogSavy</span>
+                    </div>
+                    <p>Making a difference in the lives of stray dogs, one
+                        report at a time.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Report Issue</a></li>
+                        <li><a href="#">Guidelines</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i>
+                            support@dogsavy.com</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Dog Street,
+                            Animal City</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 DogSavy. All rights reserved. | Made with <i
+                        class="fas fa-heart"></i> for our furry friends</p>
+            </div>
+        </footer>
+
+        <script src="../js/userDashboard.js"></script>
+    </body>
+</html>
