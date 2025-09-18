@@ -1,3 +1,5 @@
+import { API_URL } from './config.js';
+
 document.getElementById('registerNgoForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const organizationName = document.getElementById('organizationName').value;
@@ -10,7 +12,7 @@ document.getElementById('registerNgoForm').addEventListener('submit', async (e) 
     const latitude = pos.coords.latitude;
     const longitude = pos.coords.longitude;
 
-    const res = await fetch('http://localhost:5000/api/auth/register/ngo', {
+    const res = await fetch(`${API_URL}api/auth/register/ngo`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

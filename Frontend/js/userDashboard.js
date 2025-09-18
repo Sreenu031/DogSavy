@@ -1,3 +1,5 @@
+import { API_URL } from './config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const token = localStorage.getItem('token');
   const role = localStorage.getItem('role');
@@ -75,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
   showLoading(reportsCards, 'Loading your reports...');
 
   // Fetch user reports and validate token
-  fetch('http://localhost:5000/api/user/my-reports', {
+  fetch(`${API_URL}api/user/my-reports`, {
     headers: { Authorization: `Bearer ${token}` }
   })
   .then(res => {
@@ -166,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const reader = new FileReader();
     reader.onload = () => {
-      fetch('http://localhost:5000/api/user/report', {
+      fetch(`${API_URL}api/user/report`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -191,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         showNotification(data.message || 'Report submitted successfully!', 'success');
         // Refresh reports
-        return fetch('http://localhost:5000/api/user/my-reports', {
+        return fetch(`${API_URL}api/user/my-reports`, {
           headers: { Authorization: `Bearer ${token}` }
         });
       })

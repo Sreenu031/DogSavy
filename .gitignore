@@ -1,2 +1,5 @@
 /Backend/node_modules/
 # Node.js dependencies
+.env
+.idea/
+.vscode/

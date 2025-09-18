@@ -1,3 +1,5 @@
+import { API_URL } from './config.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const token = localStorage.getItem('token');
   const role = localStorage.getItem('role');
@@ -83,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showLoading(incomingBody, 'Loading incoming requests...');
     showLoading(incomingCards, 'Loading incoming requests...');
 
-    fetch('http://localhost:5000/api/ngo/nearby-reports', {
+    fetch(`${API_URL}api/ngo/nearby-reports`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => {
@@ -195,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Handle accepting a rescue report
   function acceptReport(reportId) {
-    fetch(`http://localhost:5000/api/ngo/accept/${reportId}`, {
+    fetch(`${API_URL}api/ngo/accept/${reportId}`, {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}` }
     })
@@ -216,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showLoading(ongoingBody, 'Loading ongoing rescues...');
     showLoading(ongoingCards, 'Loading ongoing rescues...');
 
-    fetch('http://localhost:5000/api/ngo/ongoing-rescues', {
+    fetch(`${API_URL}api/ngo/ongoing-rescues`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => res.json())
@@ -306,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Handle marking a rescue as completed
   function markRescued(reportId) {
-    fetch(`http://localhost:5000/api/ngo/rescue/${reportId}`, {
+    fetch(`${API_URL}api/ngo/rescue/${reportId}`, {
       method: 'POST',
       headers: { Authorization: `Bearer ${token}` }
     })
@@ -323,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Load summary statistics for the NGO
   function loadSummary() {
-    fetch('http://localhost:5000/api/ngo/summary', {
+    fetch(`${API_URL}api/ngo/summary`, {
       headers: { Authorization: `Bearer ${token}` }
     })
     .then(res => res.json())
